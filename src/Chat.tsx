@@ -12,6 +12,8 @@ function Chat() {
   const handleSendMessage = () => {
     if (!currentMessage && !sessionId) return;
 
+    setCurrentMessage("");
+
     setChatHistory((prevState) => [
       ...prevState,
       { id: Date.now(), message: currentMessage, sentByMe: true },
